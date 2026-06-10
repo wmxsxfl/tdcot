@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the paper below."
+title: "TD-CoT"
+type: software
+authors:
+  - family-names: Huang
+    given-names: Pengfei
+    orcid: "https://orcid.org/0009-0003-9349-0642"
+  - family-names: Hou
+    given-names: Xuezhen
+    orcid: "https://orcid.org/0009-0001-3193-8531"
+repository-code: "https://github.com/wmxsxfl/tdcot"
+license: MIT
+date-released: "2026-06-16"
+keywords:
+  - video-language models
+  - temporal reasoning
+  - chain-of-thought
+  - temporal reversal
+  - training-free inference
+preferred-citation:
+  type: conference-paper
+  title: "TD-CoT: Bridging the Holistic-Atomic Gap for Training-Free Temporal Reversal Detection in Video LVLMs"
+  authors:
+    - family-names: Huang
+      given-names: Pengfei
+      orcid: "https://orcid.org/0009-0003-9349-0642"
+    - family-names: Hou
+      given-names: Xuezhen
+      orcid: "https://orcid.org/0009-0001-3193-8531"
+  year: 2026
+  doi: "10.1145/3805622.3810743"
+  conference:
+    name: "International Conference on Multimedia Retrieval"
+    alias: "ICMR '26"
+    location: "Amsterdam, Netherlands"
+    date-start: "2026-06-16"
+    date-end: "2026-06-19"
+  collection-title: "Proceedings of the International Conference on Multimedia Retrieval (ICMR '26)"
+  collection-type: proceedings

@@ -1,0 +1,15 @@
+torch>=2.5.0
+transformers>=4.51.0
+accelerate
+qwen-vl-utils
+decord
+pillow
+numpy
+pandas
+pyarrow
+tqdm
+scipy
+torchvision
+sentencepiece
+protobuf
+lmms-eval

@@ -1,0 +1,68 @@
+{
+  "paper": "TD-CoT: Bridging the Holistic-Atomic Gap for Training-Free Temporal Reversal Detection in Video LVLMs",
+  "settings": {
+    "MVB": {
+      "name": "MVBench directionality-focused setting",
+      "builder": "src/build_mvbench_directionality_setting.py",
+      "default_path": "/data/datasets/MVBench/mvbench_directionality_setting.jsonl"
+    },
+    "TC": {
+      "name": "TempCompass forward/reverse directionality setting",
+      "builder": "src/build_tempcompass_reverse_pairs.py",
+      "paper_pair_count": 1500,
+      "default_path": "/data/datasets/TempCompass/tempcompass_directionality_items.parquet"
+    },
+    "TB": {
+      "name": "TimeBlind pairwise reversal setting",
+      "paper_pair_count": 1200,
+      "default_path": "/data/datasets/TimeBlind/data.jsonl"
+    },
+    "VideoMME-S": {
+      "name": "VideoMME short split without subtitles",
+      "lmms_eval_task_env": "VIDEOMME_SHORT_TASK"
+    },
+    "VideoMME-L": {
+      "name": "VideoMME long split without subtitles",
+      "lmms_eval_task_env": "VIDEOMME_LONG_TASK"
+    },
+    "MSRVTT": {
+      "name": "MSRVTT-QA",
+      "lmms_eval_task_env": "MSRVTT_TASK"
+    }
+  },
+  "models": {
+    "qwen_vl": {
+      "name": "Qwen2.5-VL-7B-Instruct",
+      "env": "QWEN_VL_MODEL"
+    },
+    "internvl": {
+      "name": "InternVL2-8B",
+      "env": "INTERNVL_MODEL"
+    },
+    "aux": {
+      "name": "Qwen2.5-7B-Instruct",
+      "env": "AUX_MODEL"
+    },
+    "aux_weak": {
+      "name": "Qwen2.5-3B-Instruct",
+      "env": "AUX_MODEL_3B"
+    }
+  },
+  "entry_points": {
+    "build_settings": "scripts/build_paper_settings.sh",
+    "directionality": "scripts/run_paper_directionality.sh",
+    "prompted_baselines": "scripts/run_paper_baselines.sh",
+    "timeblind_baselines": "scripts/run_timeblind_baselines_qwen.sh",
+    "ablations": "scripts/run_paper_ablations.sh",
+    "general_videoqa": "scripts/run_paper_general_videoqa.sh",
+    "router_and_statistics": "scripts/run_router_and_statistics.sh",
+    "latency": "scripts/run_latency_measurement.sh",
+    "diagnostics": "scripts/run_diagnostics_summary.sh",
+    "all": "scripts/run_all_experiments.sh"
+  },
+  "table_summary": {
+    "computed": "python src/summarize_paper_tables.py",
+    "paper_reference": "python src/summarize_paper_tables.py --table reference",
+    "status": "python src/audit_experiment_status.py"
+  }
+}

@@ -1,0 +1,22 @@
+models:
+  qwen_llm: /path/to/Qwen2.5-7B-Instruct
+  qwen_llm_3b: /path/to/Qwen2.5-3B-Instruct
+  qwen_vl: /path/to/Qwen2.5-VL-7B-Instruct
+  internvl: /path/to/InternVL2-8B
+
+data:
+  timeblind_jsonl: /path/to/TimeBlind/data.jsonl
+  dataset_root: /path/to/datasets
+  tempcompass_parquet: /path/to/TempCompass/tempcompass_combined.parquet
+  tempcompass_video_root: /path/to/TempCompass/videos/videos
+  tempcompass_directionality_parquet: /path/to/TempCompass/tempcompass_directionality_items.parquet
+  tempcompass_directionality_jsonl: /path/to/TempCompass/tempcompass_directionality_pairs.jsonl
+  mvbench_directional_jsonl: /path/to/MVBench/mvbench_directional.jsonl
+  mvbench_directionality_jsonl: /path/to/MVBench/mvbench_directionality_setting.jsonl
+  mvbench_json_root: /path/to/MVBench/json
+  mvbench_video_root: /path/to/MVBench/video_unzipped
+
+lmms_eval:
+  videomme_short_task: videomme_short_wo_subtitle
+  videomme_long_task: videomme_long_wo_subtitle
+  msrvtt_task: msrvtt_qa
